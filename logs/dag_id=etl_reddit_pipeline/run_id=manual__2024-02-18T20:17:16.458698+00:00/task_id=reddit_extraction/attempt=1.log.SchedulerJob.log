@@ -1,0 +1,1 @@
+[2024-02-18T20:31:06.212+0000] {scheduler_job_runner.py:781} ERROR - Executor reports task instance <TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-02-18T20:17:16.458698+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

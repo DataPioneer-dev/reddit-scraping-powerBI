@@ -1,0 +1,38 @@
+[2024-02-20T18:05:11.554+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction scheduled__2024-02-19T00:00:00+00:00 [queued]>
+[2024-02-20T18:05:11.582+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction scheduled__2024-02-19T00:00:00+00:00 [queued]>
+[2024-02-20T18:05:11.583+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-20T18:05:11.681+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-02-19 00:00:00+00:00
+[2024-02-20T18:05:11.701+0000] {standard_task_runner.py:60} INFO - Started process 55 to run task
+[2024-02-20T18:05:11.721+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'scheduled__2024-02-19T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmpdahj01xq']
+[2024-02-20T18:05:11.726+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask reddit_extraction
+[2024-02-20T18:05:11.896+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction scheduled__2024-02-19T00:00:00+00:00 [running]> on host 04680ef429e2
+[2024-02-20T18:05:12.099+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ACHRAF ZHAR' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-02-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-19T00:00:00+00:00'
+[2024-02-20T18:05:13.722+0000] {logging_mixin.py:188} INFO - Connected to reddit !
+[2024-02-20T18:14:16.337+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction scheduled__2024-02-19T00:00:00+00:00 [queued]>
+[2024-02-20T18:14:16.354+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction scheduled__2024-02-19T00:00:00+00:00 [queued]>
+[2024-02-20T18:14:16.355+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-20T18:14:16.383+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-02-19 00:00:00+00:00
+[2024-02-20T18:14:16.395+0000] {standard_task_runner.py:60} INFO - Started process 55 to run task
+[2024-02-20T18:14:16.402+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'scheduled__2024-02-19T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmppvp860lj']
+[2024-02-20T18:14:16.406+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask reddit_extraction
+[2024-02-20T18:14:16.483+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction scheduled__2024-02-19T00:00:00+00:00 [running]> on host b6cda3480553
+[2024-02-20T18:14:16.607+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ACHRAF ZHAR' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-02-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-19T00:00:00+00:00'
+[2024-02-20T18:14:16.871+0000] {logging_mixin.py:188} INFO - Connected to reddit !
+[2024-02-20T18:14:20.007+0000] {python.py:201} INFO - Done. Returned value was: /opt/airflow/data/output/reddit_20240220.csv
+[2024-02-20T18:14:20.053+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_reddit_pipeline, task_id=reddit_extraction, execution_date=20240219T000000, start_date=20240220T181416, end_date=20240220T181420
+[2024-02-20T18:14:20.137+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-20T18:14:20.185+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-02-20T18:43:51.875+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction scheduled__2024-02-19T00:00:00+00:00 [queued]>
+[2024-02-20T18:43:51.890+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction scheduled__2024-02-19T00:00:00+00:00 [queued]>
+[2024-02-20T18:43:51.891+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-20T18:43:51.911+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-02-19 00:00:00+00:00
+[2024-02-20T18:43:51.920+0000] {standard_task_runner.py:60} INFO - Started process 56 to run task
+[2024-02-20T18:43:51.926+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'scheduled__2024-02-19T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmpv5qvfgwd']
+[2024-02-20T18:43:51.930+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask reddit_extraction
+[2024-02-20T18:43:52.022+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction scheduled__2024-02-19T00:00:00+00:00 [running]> on host 95cb6329b0b5
+[2024-02-20T18:43:52.135+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ACHRAF ZHAR' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-02-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-19T00:00:00+00:00'
+[2024-02-20T18:43:52.394+0000] {logging_mixin.py:188} INFO - Connected to reddit !
+[2024-02-20T18:43:54.626+0000] {python.py:201} INFO - Done. Returned value was: /opt/airflow/data/output/reddit_20240220.csv
+[2024-02-20T18:43:54.665+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_reddit_pipeline, task_id=reddit_extraction, execution_date=20240219T000000, start_date=20240220T184351, end_date=20240220T184354
+[2024-02-20T18:43:54.729+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-20T18:43:54.754+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

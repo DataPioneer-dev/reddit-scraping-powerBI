@@ -1,0 +1,26 @@
+[2024-02-20T18:14:23.329+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.upload_s3 manual__2024-02-20T18:14:11.628647+00:00 [queued]>
+[2024-02-20T18:14:23.375+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.upload_s3 manual__2024-02-20T18:14:11.628647+00:00 [queued]>
+[2024-02-20T18:14:23.389+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-20T18:14:23.459+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): upload_s3> on 2024-02-20 18:14:11.628647+00:00
+[2024-02-20T18:14:23.483+0000] {standard_task_runner.py:60} INFO - Started process 62 to run task
+[2024-02-20T18:14:23.496+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'upload_s3', 'manual__2024-02-20T18:14:11.628647+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmpjblq4hkz']
+[2024-02-20T18:14:23.504+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask upload_s3
+[2024-02-20T18:14:23.634+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_reddit_pipeline.upload_s3 manual__2024-02-20T18:14:11.628647+00:00 [running]> on host b6cda3480553
+[2024-02-20T18:14:23.939+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ACHRAF ZHAR' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='upload_s3' AIRFLOW_CTX_EXECUTION_DATE='2024-02-20T18:14:11.628647+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-20T18:14:11.628647+00:00'
+[2024-02-20T18:14:23.957+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/pipelines/aws_upload_pipeline.py", line 6, in upload_s3_pipeline
+    file_path = ti.xcom_pull(task_id='reddit_extraction', key='return_value')
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+TypeError: xcom_pull() got an unexpected keyword argument 'task_id'
+[2024-02-20T18:14:23.982+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=etl_reddit_pipeline, task_id=upload_s3, execution_date=20240220T181411, start_date=20240220T181423, end_date=20240220T181423
+[2024-02-20T18:14:24.062+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5 for task upload_s3 (xcom_pull() got an unexpected keyword argument 'task_id'; 62)
+[2024-02-20T18:14:24.115+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-20T18:14:24.153+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
